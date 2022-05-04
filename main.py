@@ -2,6 +2,7 @@ import os
 import requests  # noqa We are just importing this to prove the dependency installed correctly
 import xmltodict
 
+
 def main():
 #     my_input = os.environ["INPUT_MYINPUT"]
 #     my_output = f"Hello {my_input}"
@@ -18,10 +19,11 @@ def main():
             "buy_price": json_data['root']['ratelist']['city'][0]['item'][0]['@buy'],
             "sell_price": json_data['root']['ratelist']['city'][0]['item'][0]['@sell']
         }
-    except:
+    except as Exception:
         pass
 
     print(f"::set-output name=myOutput::{str(returned_data)}")
+
 
 if __name__ == "__main__":
     main()
