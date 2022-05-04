@@ -22,6 +22,7 @@ def main():
     except as Exception:
         pass
 
+    
     print(f"::set-output name=myOutput::{str(returned_data)}")
 
 
