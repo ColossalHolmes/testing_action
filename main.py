@@ -21,7 +21,7 @@ def main():
     except:
         pass
 
-    print(f"::set-output name=myOutput::{returned_data}")
+    print(f"::set-output name=myOutput::{str(returned_data)}")
 
 if __name__ == "__main__":
     main()
