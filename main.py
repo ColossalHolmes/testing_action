@@ -19,7 +19,7 @@ def main():
             "buy_price": json_data['root']['ratelist']['city'][0]['item'][0]['@buy'],
             "sell_price": json_data['root']['ratelist']['city'][0]['item'][0]['@sell']
         }
-    except as Exception:
+    except:
         pass
 
     
